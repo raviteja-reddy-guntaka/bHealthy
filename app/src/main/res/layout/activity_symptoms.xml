@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".SymptomsActivity">
+
+<!--    Title-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add your symptoms"
+        app:layout_constraintBaseline_toTopOf="@id/title"
+        android:textSize="24sp" />
+
+<!--    dropdown container-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/selectionGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.09" />
+
+    <TextView
+        android:id="@+id/labelText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select a symptom to add :"
+        app:layout_constraintBaseline_toTopOf="@id/selectionGuideLine"/>
+
+
+    <Spinner
+        android:id="@+id/symptomsDropdown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/selectionGuideLine" />
+
+<!--    star rating container-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/starRatingBarGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <RatingBar
+        android:id="@+id/starRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="0.1"
+        android:isIndicator="false"
+        app:layout_constraintTop_toBottomOf="@id/starRatingBarGuideLine" />
+
+    <TextView
+        android:id="@+id/starRatingValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.0"
+        android:paddingStart="8dp"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@id/starRatingBarGuideLine"
+        app:layout_constraintStart_toEndOf="@id/starRatingBar" />
+
+<!--    Add symptom button-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/addSymptomButtonGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.30" />
+
+    <Button
+        android:id="@+id/addSymptomButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ADD SYMPTOM"
+        app:layout_constraintBottom_toBottomOf="@id/addSymptomButtonGuideLine" />
+
+<!--    upload symptoms button-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/uploadSymptomsGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.37" />
+
+    <Button
+        android:id="@+id/uploadSymptoms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="UPLOAD SYMPTOMS"
+        app:layout_constraintBottom_toBottomOf="@id/uploadSymptomsGuideLine" />
+
+    <!--    upload symptoms button-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/outputGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.40" />
+
+<!--    <ListView-->
+<!--        android:id="@+id/mobile_list"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintBottom_toBottomOf="@id/outputGuideLine" />-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mobile_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/outputGuideLine" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

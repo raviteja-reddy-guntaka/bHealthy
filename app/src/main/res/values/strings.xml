@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">BHealthy</string>
+    <string name="start_capture">Start Video Capture</string>
+    <string name="stop_capture">Stop Video Capture</string>
+
+    <string-array name="symptoms_dropdown_items">
+        <item>Nausea</item>
+        <item>Headache</item>
+        <item>Diarrhea</item>
+        <item>Soar Throat</item>
+        <item>Fever</item>
+        <item>Muscle Ache</item>
+        <item>Loss of Smell or Taste</item>
+        <item>Cough</item>
+        <item>Shortness of Breath</item>
+        <item>Feeling tired</item>
+    </string-array>
+
+</resources>

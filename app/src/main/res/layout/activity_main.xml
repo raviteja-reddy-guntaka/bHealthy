@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/sessionInfoTextGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <TextView
+        android:id="@+id/labelText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Vitals Id : "
+        android:textSize="20.25sp"
+        app:layout_constraintTop_toBottomOf="@id/sessionInfoTextGuideLine"/>
+
+    <TextView
+        android:id="@+id/sessionId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="id"
+        android:textSize="20.25sp"
+        app:layout_constraintTop_toBottomOf="@id/sessionInfoTextGuideLine"
+        app:layout_constraintStart_toEndOf="@id/labelText" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/heartRateTextGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <TextView
+        android:id="@+id/heartRateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintTop_toBottomOf="@id/heartRateTextGuideLine"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/heartRateGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.30" />
+
+    <Button
+        android:id="@+id/heartRate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MEASURE HEART RATE"
+        app:layout_constraintTop_toBottomOf="@id/heartRateGuideLine" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/respiratoryRateTextGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.40" />
+
+    <TextView
+        android:id="@+id/respiratoryRateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintTop_toBottomOf="@id/respiratoryRateTextGuideLine"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/respiratoryRateGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <Button
+        android:id="@+id/respiratoryRate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MEASURE RESPIRATORY RATE"
+        app:layout_constraintTop_toBottomOf="@id/respiratoryRateGuideLine" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/uploadSignsGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.55" />
+
+    <Button
+        android:id="@+id/uploadSigns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="UPLOAD SIGNS"
+        app:layout_constraintTop_toBottomOf="@id/uploadSignsGuideLine" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/symptomsGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.65" />
+
+    <Button
+        android:id="@+id/symptoms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SYMPTOMS"
+        app:layout_constraintTop_toBottomOf="@id/symptomsGuideLine" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
