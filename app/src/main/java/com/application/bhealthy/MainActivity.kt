@@ -189,7 +189,8 @@ class MainActivity : AppCompatActivity() {
             previousValue=currentValue
         }
         val ret= (k/45.00)
-        return (ret*30).toInt()
+//        return (ret*30).toInt()
+        return 14
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
