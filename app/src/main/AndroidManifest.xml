@@ -7,10 +7,11 @@
     <uses-feature android:name="android.hardware.camera.any" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
-<!--    <uses-permission android:name="android.permission.RECORD_AUDIO" />-->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         tools:ignore="ScopedStorage" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- INTERNET permission -->
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -22,7 +23,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BHealthy"
         tools:targetApi="31">
-
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -36,12 +36,9 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity android:name=".SymptomsActivity">
-            <!-- Other activity attributes and intent filters go here -->
-        </activity>
-        <activity android:name=".CameraActivity">
-            <!-- Other activity attributes and intent filters go here -->
-        </activity>
+        <activity android:name=".SymptomsActivity" />
+        <activity android:name=".CameraActivity" />
+        <activity android:name=".DirectionsActivity" />
     </application>
 
 </manifest>

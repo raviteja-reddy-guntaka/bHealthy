@@ -115,6 +115,19 @@
         android:text="SYMPTOMS"
         app:layout_constraintTop_toBottomOf="@id/symptomsGuideLine" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/directionsGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <Button
+        android:id="@+id/directionsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FIND DIRECTIONS"
+        app:layout_constraintTop_toBottomOf="@id/directionsGuideLine" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

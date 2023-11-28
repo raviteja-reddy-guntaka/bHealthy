@@ -23,6 +23,13 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.application.bhealthy.data.MyDatabaseHelper
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import okhttp3.OkHttpClient
+import okhttp3.Request
+import okhttp3.Response
+import java.net.URLEncoder
 import java.util.*
 import kotlin.math.abs
 import kotlin.math.pow
@@ -30,6 +37,8 @@ import kotlin.math.pow
 class MainActivity : AppCompatActivity() {
 
     val CAMERA_ACTIVITY_REQUEST_CODE = 1 // Define a request code (any integer)
+    val FIND_DIRECTIONS_ACTIVITY_REQUEST_CODE = 1 // Define a request code (any integer)
+
     private val uniqueIdKey = "unique_id"
     private lateinit var sharedPreferences: SharedPreferences
 
@@ -78,6 +87,14 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this@MainActivity, CameraActivity::class.java)
             intent.putExtra("unique_id", uniqueId)
             startActivityForResult(intent, CAMERA_ACTIVITY_REQUEST_CODE)
+        }
+
+        // Go to directions activity
+        val findDirectionsButton = findViewById<Button>(R.id.directionsButton)
+        findDirectionsButton.setOnClickListener {
+            val intent = Intent(this@MainActivity, DirectionsActivity::class.java)
+            intent.putExtra("unique_id", uniqueId)
+            startActivity(intent)
         }
 
         // Respiratory rate calculation
