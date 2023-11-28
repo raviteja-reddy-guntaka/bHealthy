@@ -19,7 +19,7 @@ class DirectionsActivity : AppCompatActivity() {
 
     private lateinit var retrofit: Retrofit
     private lateinit var apiService: ApiService
-    val apiKey = "AIzaSyA4Ty2HD9kyLDCrWkI7FxL2z1n-t1Sdj-U"
+    val apiKey = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
